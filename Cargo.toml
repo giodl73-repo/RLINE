@@ -1,5 +1,13 @@
 [workspace]
 members = [
+    "crates/rctx-core",
+    "crates/rhist-core",
+    "crates/rhist-io",
+    "crates/rhist-cli",
+    "crates/rgraph-core",
+    "crates/rstat-core",
+    "crates/rmath-core",
+    "crates/ropt-core",
     "crates/rline-core",
     "crates/rline-cli",
 ]
@@ -15,8 +23,11 @@ repository = "https://github.com/giodl73-repo/RLINE"
 [workspace.dependencies]
 anyhow = "1.0"
 clap = { version = "4.5", features = ["derive"] }
+rand = { version = "0.8", features = ["small_rng"] }
 rline-core = { path = "crates/rline-core" }
 serde = { version = "1.0", features = ["derive"] }
 serde_json = "1.0"
+sha2 = "0.10"
+tempfile = "3"
 thiserror = "2.0"
 

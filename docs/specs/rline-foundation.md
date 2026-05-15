@@ -2,14 +2,15 @@
 
 ## Goal
 
-Create a neutral Rust workspace for reusable `r*` kernels currently embedded in
-BISECT so BISECT, CROP, ROUTE, and later repos can depend on them cleanly.
+Create a neutral Rust workspace for reusable `r*` kernels extracted from BISECT
+so BISECT, CROP, ROUTE, RPLAN, RCOUNT, and later repos can depend on them
+cleanly.
 
 ## Core contract
 
 ### `rline.manifest.v1`
 
-Describes the shared kernel family before extraction:
+Describes the shared kernel family:
 
 - `family`: package-family label, initially `rline`.
 - `crates`: candidate kernel crates, current source paths, internal
@@ -17,19 +18,21 @@ Describes the shared kernel family before extraction:
 - `consumers`: repos that should consume the extracted kernels.
 - `non_goals`: application logic that must stay outside RLINE.
 
-The foundation manifest is intentionally planning-oriented. It records what
-will move and the dependency shape without copying BISECT code in the first
-pulse.
+The foundation manifest records the extracted kernel family and the remaining
+consumer migration sequence.
 
-## Initial candidates
+## Extracted crates
 
 | Crate | Kind | Current role |
 |-------|------|--------------|
 | `rctx-core` | context | context packages, crosswalk verification, graph/source provenance |
 | `rstat-core` | statistics | deterministic summary stats, weighted stats, quantiles |
+| `rmath-core` | math | deterministic numeric and linear algebra kernels |
 | `ropt-core` | optimization | Pareto fronts, crowding distance, seed derivation, budget selection |
 | `rgraph-core` | graph | graph traits, shortest paths, cuts, connectivity, cluster summaries |
 | `rhist-core` | history | history and lineage primitives layered on RCTX |
+| `rhist-io` | history IO | RHIST package directory read/write |
+| `rhist-cli` | history CLI | standalone verifier CLI |
 
 ## Dependency boundary
 
@@ -43,8 +46,8 @@ BISECT, CROP, FLETCH, ROUTE, or RCOUNT.
 - No RCOUNT CLI or election-audit workflow logic in RLINE.
 - No CROP corpus workflow, FLETCH cache workflow, or ROUTE domain workflow in
   RLINE.
-- No extraction until the source crate dependency graph and public contracts are
-  documented.
+- RPLAN and RCOUNT live in their own sibling repos; they are consumers, not
+  RLINE members.
 
 ## Initial CLI
 
@@ -57,8 +60,7 @@ rline packages --format json
 ## Migration sequence
 
 1. Foundation manifest and repo scaffold.
-2. Source audit of current `r*` crates and downstream users.
-3. Extract zero-application-dependency crates first: `rstat-core`, `ropt-core`.
-4. Extract graph/context crates with compatibility shims.
-5. Update BISECT and CROP to consume RLINE by git dependency.
+2. Extract kernel crates into RLINE.
+3. Update RPLAN and RCOUNT to use sibling RLINE/RPLAN dependencies.
+4. Update BISECT and CROP to consume RLINE by git dependency.
 

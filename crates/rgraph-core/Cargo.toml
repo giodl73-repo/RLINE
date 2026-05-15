@@ -1,0 +1,15 @@
+[package]
+name = "rgraph-core"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+description = "Reusable deterministic graph algorithms for civic analysis projects"
+
+[dependencies]
+thiserror.workspace = true
+
+[dev-dependencies]
+ropt-core = { path = "../ropt-core" }
+rstat-core = { path = "../rstat-core" }
+

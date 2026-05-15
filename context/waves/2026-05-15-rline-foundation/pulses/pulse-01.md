@@ -10,7 +10,8 @@ the `r*` kernel extraction out of BISECT.
 - Added `rline-core` and `rline-cli`.
 - Added `rline.manifest.v1` structs and validation.
 - Added foundation manifest entries for `rctx-core`, `rgraph-core`,
-  `rstat-core`, `ropt-core`, and `rhist-core`.
+  `rstat-core`, `rmath-core`, `ropt-core`, and `rhist-core`.
+- Extracted the shared kernel crates plus `rhist-io` and `rhist-cli`.
 - Added `rline manifest` and `rline packages`.
 - Added README, foundation spec, and wave scaffolding.
 

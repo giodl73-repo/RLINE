@@ -1,0 +1,12 @@
+[package]
+name = "rstat-core"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+description = "Reusable deterministic statistical kernels for civic analysis projects"
+
+[dependencies]
+rand.workspace = true
+thiserror.workspace = true
+

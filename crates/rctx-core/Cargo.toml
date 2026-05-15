@@ -1,0 +1,13 @@
+[package]
+name = "rctx-core"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+description = "RCTX shared context and crosswalk verifier primitives"
+
+[dependencies]
+serde.workspace = true
+serde_json.workspace = true
+sha2.workspace = true
+thiserror.workspace = true
