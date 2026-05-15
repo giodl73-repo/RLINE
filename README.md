@@ -2,6 +2,8 @@
 
 **Reusable Rust linework for graph, context, statistics, and optimization kernels.**
 
+**Series:** [Tools & Infrastructure](https://github.com/giodl73-repo/giodl73-repo/blob/main/series/tools-infrastructure.md).
+
 RLINE is the neutral home for reusable `r*` crates that should not live inside a
 single product repo. Its first job is to let BISECT, CROP, ROUTE, RPLAN, RCOUNT,
 and future tools depend on shared kernels without depending on BISECT itself.
@@ -38,9 +40,9 @@ cargo run -p rline-cli -- packages
 cargo run -p rline-cli -- packages --format json
 ```
 
-`rline manifest` emits `rline.manifest.v1`, the first extraction-planning
-contract for the shared kernel family. `rline packages` lists the candidate
-crates and their current source paths.
+`rline manifest` emits `rline.manifest.v1`, the package-family contract for the
+shared kernel family. `rline packages` lists the extracted crates and their
+current source paths.
 
 ## Workspace
 
@@ -52,8 +54,9 @@ crates and their current source paths.
 
 ## Design rule
 
-RLINE stays product-neutral. BISECT, CROP, ROUTE, FLETCH, and RCOUNT can consume
-or reference RLINE, but RLINE must not depend on those application workflows.
+RLINE stays product-neutral. BISECT, CROP, ROUTE, FLETCH, RPLAN, and RCOUNT can
+consume or reference RLINE, but RLINE must not depend on those application
+workflows.
 
 ## Specs
 
