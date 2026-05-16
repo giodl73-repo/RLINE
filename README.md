@@ -4,6 +4,10 @@
 
 **Series:** [Tools & Infrastructure](https://github.com/giodl73-repo/giodl73-repo/blob/main/series/tools-infrastructure.md).
 
+**Review roles:** This repo uses
+[ROLES](https://github.com/giodl73-repo/ROLES), the `.roles` convention for
+repository-local review panels.
+
 RLINE is the neutral home for reusable `r*` crates that should not live inside a
 single product repo. Its first job is to let BISECT, CROP, ROUTE, RPLAN, RCOUNT,
 and future tools depend on shared kernels without depending on BISECT itself.
