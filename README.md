@@ -16,10 +16,10 @@ and future tools depend on shared kernels without depending on BISECT itself.
 
 - **Clean dependency direction**: product repos consume RLINE kernels instead of
   importing reusable code from an application workspace.
-- **Small generic crates**: graph, context, statistics, optimization, and history
-  primitives remain product-neutral.
+- **Small generic crates**: graph, context, statistics, optimization, facility,
+  and history primitives remain product-neutral.
 - **Extracted kernels**: the foundation repo now contains the shared graph,
-  context, statistics, math, optimization, and history crates.
+  context, statistics, math, optimization, facility, and history crates.
 - **No product logic**: redistricting, election-audit, route, cache, or context
   packaging workflows stay in their own repos.
 
@@ -32,6 +32,7 @@ and future tools depend on shared kernels without depending on BISECT itself.
 | `rstat-core` | deterministic statistics and quantiles |
 | `rmath-core` | deterministic numeric and linear algebra kernels |
 | `ropt-core` | deterministic optimization helpers |
+| `rfacility-core` | product-neutral facility identity, category, capability, and requirement primitives |
 | `rhist-core` | history and lineage primitives layered on RCTX |
 | `rhist-io` | RHIST package directory read/write helpers |
 | `rhist-cli` | `rhist` command-line verifier |
@@ -54,7 +55,7 @@ current source paths.
 |-------|---------|
 | `rline-core` | Manifest, package-family, and validation contracts for kernel extraction. |
 | `rline-cli` | Small command surface for inspecting the foundation manifest. |
-| `rctx-core`, `rgraph-core`, `rstat-core`, `rmath-core`, `ropt-core`, `rhist-*` | Extracted shared kernel crates. |
+| `rctx-core`, `rgraph-core`, `rstat-core`, `rmath-core`, `ropt-core`, `rfacility-core`, `rhist-*` | Extracted shared kernel crates. |
 
 ## Design rule
 

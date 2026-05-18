@@ -55,6 +55,7 @@ pub enum KernelKind {
     Statistics,
     Math,
     Optimization,
+    Facility,
     History,
     HistoryIo,
     HistoryCli,
@@ -121,6 +122,14 @@ pub fn foundation_manifest() -> RlineManifest {
                 ],
                 migration_status: MigrationStatus::Extracted,
                 public_contract: "directed weighted graph traits, shortest paths, cut metrics, connectivity, and cluster summaries".to_string(),
+            },
+            KernelCrateSpec {
+                name: "rfacility-core".to_string(),
+                kind: KernelKind::Facility,
+                source_path: "crates\\rfacility-core".to_string(),
+                internal_dependencies: vec![],
+                migration_status: MigrationStatus::Extracted,
+                public_contract: "product-neutral facility identity, category, capability, and requirement primitives".to_string(),
             },
             KernelCrateSpec {
                 name: "rhist-core".to_string(),

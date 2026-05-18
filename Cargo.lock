@@ -393,6 +393,15 @@ dependencies = [
 ]
 
 [[package]]
+name = "rfacility-core"
+version = "0.1.0"
+dependencies = [
+ "serde",
+ "serde_json",
+ "thiserror",
+]
+
+[[package]]
 name = "rgraph-core"
 version = "0.1.0"
 dependencies = [

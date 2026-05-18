@@ -30,6 +30,7 @@ consumer migration sequence.
 | `rmath-core` | math | deterministic numeric and linear algebra kernels |
 | `ropt-core` | optimization | Pareto fronts, crowding distance, seed derivation, budget selection |
 | `rgraph-core` | graph | graph traits, shortest paths, cuts, connectivity, cluster summaries |
+| `rfacility-core` | facility | product-neutral facility identity, category, capability, and requirement primitives |
 | `rhist-core` | history | history and lineage primitives layered on RCTX |
 | `rhist-io` | history IO | RHIST package directory read/write |
 | `rhist-cli` | history CLI | standalone verifier CLI |
@@ -46,6 +47,7 @@ BISECT, CROP, FLETCH, ROUTE, or RCOUNT.
 - No RCOUNT CLI or election-audit workflow logic in RLINE.
 - No CROP corpus workflow, FLETCH cache workflow, or ROUTE domain workflow in
   RLINE.
+- No PORTO placement/access policy or CERES facility economics in RLINE.
 - RPLAN and RCOUNT live in their own sibling repos; they are consumers, not
   RLINE members.
 

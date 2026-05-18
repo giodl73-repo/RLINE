@@ -5,6 +5,7 @@ members = [
     "crates/rhist-io",
     "crates/rhist-cli",
     "crates/rgraph-core",
+    "crates/rfacility-core",
     "crates/rstat-core",
     "crates/rmath-core",
     "crates/ropt-core",
