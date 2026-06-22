@@ -4,6 +4,10 @@ RLINE work is organized into small waves and pulses.
 
 ## Active wave
 
+- `2026-06-06-rline-algebra-kernel-candidate`
+
+## Prior waves
+
 - `2026-05-15-rline-foundation`
 
 ## Protocol
