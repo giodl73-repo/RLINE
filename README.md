@@ -8,6 +8,26 @@
 [ROLES](https://github.com/giodl73-repo/ROLES), the `.roles` convention for
 repository-local review panels.
 
+## R package family
+
+RLINE is the kernel foundation for a reusable civic-evidence package family:
+
+```text
+                    ┌→ RPLAN  — district-plan packages, IO, and audits ─┐
+RLINE — kernels ────┤                                                   ├→ BISECT
+                    └→ RCOUNT — count packages and audit replay ────────┘
+```
+
+| Repo | Responsibility |
+|------|----------------|
+| **RLINE** | Product-neutral graph, context, statistics, math, optimization, facility, and history kernels. |
+| [RPLAN](https://github.com/giodl73-repo/RPLAN) | Portable district-plan representation, interchange, hashing, and audit certificates. |
+| [RCOUNT](https://github.com/giodl73-repo/RCOUNT) | Election-count package verification, reconciliation, aggregation, and audit replay. |
+| [BISECT](https://github.com/giodl73-repo/BISECT) | Redistricting application and research workbench that consumes the reusable layers. |
+
+The dependency direction is one-way: generic kernels and packages must not
+depend on BISECT product workflows.
+
 RLINE is the neutral home for reusable `r*` crates that should not live inside a
 single product repo. Its first job is to let BISECT, CROP, ROUTE, RPLAN, RCOUNT,
 and future tools depend on shared kernels without depending on BISECT itself.
@@ -81,4 +101,3 @@ cargo run -p rhist-cli -- --help
 ## License
 
 MIT. See [`LICENSE`](LICENSE).
-
