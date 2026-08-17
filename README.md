@@ -85,6 +85,9 @@ workflows.
 
 ## Specs
 
+- [`docs\compatibility.md`](docs/compatibility.md) defines the protected
+  pre-1.0 contracts, versioning rules, and RCOUNT downstream breakage
+  rehearsal.
 - [`docs\specs\rline-foundation.md`](docs/specs/rline-foundation.md) defines the
   initial manifest and extraction boundaries.
 - `context\waves\` tracks implementation waves and pulse history.
