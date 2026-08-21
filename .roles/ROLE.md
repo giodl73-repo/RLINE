@@ -12,6 +12,19 @@ consumer migration plans, or validation surfaces.
 | `parliament/manifest-contract-auditor.md` | Manifest Contract Auditor | Stable package-family contracts vs. implementation churn |
 | `parliament/consumer-migration-reviewer.md` | Consumer Migration Reviewer | Reusable extraction vs. breaking sibling repos |
 
+## Productive tensions
+
+| Pulls | Against | Because |
+|---|---|---|
+| Kernel Boundary Steward | Manifest Contract Auditor | A minimal kernel can conflict with exposing enough metadata for deterministic manifests. |
+| Manifest Contract Auditor | Consumer Migration Reviewer | A cleaner manifest contract can invalidate existing files or change upgrade interpretation. |
+| Consumer Migration Reviewer | Kernel Boundary Steward | Compatibility shims reduce migration risk but can permanently enlarge the kernel surface. |
+
+Kernel leakage and non-deterministic interpretation block first. Resolve migration disputes with
+old/new manifest fixtures and an explicit removal condition for every compatibility shim. If the
+evidence cannot satisfy both sides, preserve the existing contract and require an owner decision
+before widening the boundary.
+
 ## Review order
 
 1. Use Kernel Boundary Steward for any crate extraction or dependency change.
