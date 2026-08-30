@@ -2,21 +2,21 @@
   {
     "source_id": "syn-2024-precincts.csv",
     "path": "sources/syn-2024-precincts.csv",
-    "sha256": "sha256:4615f7a4fefc7d9764950014f74ccf0d1ece917c3b105a22e53b80dccf29a771",
+    "sha256": "sha256:9304199ca0f16c1c0c29877374da0a4c80a6c09212ad9103a03ed232f4e860dd",
     "media_type": "text/csv",
     "description": "Synthetic 2024 precinct list for split/merge fixture"
   },
   {
     "source_id": "syn-2028-precincts.csv",
     "path": "sources/syn-2028-precincts.csv",
-    "sha256": "sha256:ae523e5be8f1a0c0cd1a3f6b692e39313a0f2ef13b5d53cb96f3a21218d5362a",
+    "sha256": "sha256:33ad19bee675fbc9f615fbfa18e579170954abb517835ba886ffc8d24a3a8fb5",
     "media_type": "text/csv",
     "description": "Synthetic 2028 precinct list for split/merge fixture"
   },
   {
     "source_id": "syn-2028-precinct-change-notice.txt",
     "path": "sources/syn-2028-precinct-change-notice.txt",
-    "sha256": "sha256:018dcfd6b63bcb0c98531b5fd05a6df47ee3add8c787605628f5284f683d757e",
+    "sha256": "sha256:370e473204b52c0b52158d2b778c029cc3374d139d55d765dc5da1cfc0455729",
     "media_type": "text/plain",
     "description": "Synthetic split/merge notice"
   }

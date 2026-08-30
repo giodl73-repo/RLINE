@@ -83,6 +83,10 @@ RLINE stays product-neutral. BISECT, CROP, ROUTE, FLETCH, RPLAN, and RCOUNT can
 consume or reference RLINE, but RLINE must not depend on those application
 workflows.
 
+Candidate kernels are not public API commitments. The algebra-kernel wave stays
+planning-only until concrete consumer pressure, minimal API review, tests, and
+migration notes exist.
+
 ## Specs
 
 - [`docs\compatibility.md`](docs/compatibility.md) defines the protected

@@ -2,21 +2,21 @@
   {
     "source_id": "syn-2024-precincts.csv",
     "path": "sources/syn-2024-precincts.csv",
-    "sha256": "sha256:d785e6748b3e5aa83e387105e9e2b45ab2f793dc59e685a306da3e5bac1112b0",
+    "sha256": "sha256:f5e8a0f2175a8814826ccbc20c918db153b44200f1c722722cdcff8d66d54d02",
     "media_type": "text/csv",
     "description": "Synthetic 2024 precinct list"
   },
   {
     "source_id": "syn-2028-precincts.csv",
     "path": "sources/syn-2028-precincts.csv",
-    "sha256": "sha256:797a0e40ce5472e337b3b8f1ed49174543e2b5df7b35bbce7b58961fec747726",
+    "sha256": "sha256:281cbc8539b7543331ffbcc333dd188b03c8a7e6bdd0dce25e78de08657b08f8",
     "media_type": "text/csv",
     "description": "Synthetic 2028 precinct list"
   },
   {
     "source_id": "syn-rename-notice.txt",
     "path": "sources/syn-rename-notice.txt",
-    "sha256": "sha256:526e3b016f6ca172fdbad4df64374e45df0dfc6d39d161f10355e392a68b9f67",
+    "sha256": "sha256:7c2081728dd51acf4c5a3998c3f212db986129877de089c337359261cd49428f",
     "media_type": "text/plain",
     "description": "Synthetic rename notice"
   }

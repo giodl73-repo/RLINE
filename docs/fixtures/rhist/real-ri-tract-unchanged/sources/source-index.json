@@ -2,28 +2,28 @@
   {
     "source_id": "ri-tract-2000-slice.csv",
     "path": "sources/ri-tract-2000-slice.csv",
-    "sha256": "sha256:089e625d7d729cf1e6295205cffb056420c502efb4d107c1679eb5874e841209",
+    "sha256": "sha256:c9438063e53a287a8a85c0fa814c8244230e64bdc2581cdba5c9ce9c622be4ab",
     "media_type": "text/csv",
     "description": "Preserved Rhode Island 2000 tract demographic row for GEOID 44001030601"
   },
   {
     "source_id": "ri-tract-2010-slice.csv",
     "path": "sources/ri-tract-2010-slice.csv",
-    "sha256": "sha256:e40320becbd6190eafe0765ecfa857aeebaa248f76a2d695e3c6fb364e229e70",
+    "sha256": "sha256:15af4b3b9fb96a62c987d65aedd18ac525d49b2fdbbfc82224bafbaade981a6c",
     "media_type": "text/csv",
     "description": "Preserved Rhode Island 2010 tract demographic row for GEOID 44001030601"
   },
   {
     "source_id": "ri-tract-2020-slice.csv",
     "path": "sources/ri-tract-2020-slice.csv",
-    "sha256": "sha256:db218cde42412884a18e7196c6c0546d4424ecd10dc8c2df32a2a87b08964c10",
+    "sha256": "sha256:e9676e18069578fa2974aa35c8293dd56af4f77f6a324b456aa0c80a101f0870",
     "media_type": "text/csv",
     "description": "Preserved Rhode Island 2020 tract demographic row for GEOID 44001030601"
   },
   {
     "source_id": "source-note.txt",
     "path": "sources/source-note.txt",
-    "sha256": "sha256:453f4062d9ddcc308cf4ac46f37483533da8100b69d712d6adfa5b8041040b0c",
+    "sha256": "sha256:c1d6062fc852a6f43e3f0c6a1e4b1cb1f33ef05d0358d49ffe64b67e3dde0794",
     "media_type": "text/plain",
     "description": "Fixture source boundary note"
   }
