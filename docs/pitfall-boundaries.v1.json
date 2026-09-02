@@ -1,0 +1,105 @@
+{
+  "$schema": "rline.pitfall-boundaries.v1",
+  "owner": "RLINE maintainer",
+  "purpose": "Machine-readable boundaries for kernel neutrality, candidate algebra, and RCOUNT rehearsal.",
+  "authority": {
+    "kernel_surface": "product-neutral r* crates, contracts, manifests, and deterministic validation primitives",
+    "product_workflow": "owned by BISECT, CROP, ROUTE, FLETCH, RPLAN, RCOUNT, or another consumer repo",
+    "candidate_algebra": "planning-only wave until concrete consumer pressure and scoped implementation review",
+    "public_api_commitment": "requires minimal API review, tests, migration notes, and consumer proof",
+    "downstream_readiness": "requires affected RLINE tests plus RCOUNT downstream rehearsal"
+  },
+  "pitfall_boundaries": [
+    {
+      "entryId": "RLINE-PF-01",
+      "requiredOwners": [
+        "Kernel Boundary Steward",
+        "Consumer Migration Reviewer"
+      ],
+      "sourceLayer": "shared kernel extraction, public APIs, manifests, and future consumer migrations",
+      "maySupport": [
+        "reusable kernel surface",
+        "neutral manifest field",
+        "consumer migration candidate",
+        "extraction plan",
+        "dependency direction evidence"
+      ],
+      "blockedClaims": [
+        "BISECT workflow API",
+        "CROP workflow API",
+        "ROUTE workflow API",
+        "FLETCH workflow API",
+        "RPLAN workflow API",
+        "RCOUNT workflow API",
+        "application workflow in kernel surface",
+        "product-specific fixture assumption"
+      ],
+      "requiredEvidence": [
+        "Kernel Boundary Steward review",
+        "consumer migration notes",
+        "neutral naming",
+        "dependency direction check",
+        "workspace tests"
+      ]
+    },
+    {
+      "entryId": "RLINE-PF-02",
+      "requiredOwners": [
+        "Kernel Boundary Steward",
+        "Consumer Migration Reviewer"
+      ],
+      "sourceLayer": "algebra candidate wave, shared math surface, downstream planning, and portfolio dependency adoption",
+      "maySupport": [
+        "candidate consumer list",
+        "planning-only algebra sketch",
+        "consumer pressure hypothesis",
+        "future implementation wave input"
+      ],
+      "blockedClaims": [
+        "ralg-core public contract",
+        "ralgebra-core public contract",
+        "implementation commitment",
+        "scheduled public crate",
+        "dependency adoption target",
+        "accepted API promise"
+      ],
+      "requiredEvidence": [
+        "concrete consumer pressure",
+        "minimal API review",
+        "tests",
+        "migration notes",
+        "scoped implementation wave"
+      ]
+    },
+    {
+      "entryId": "RLINE-PF-03",
+      "requiredOwners": [
+        "Consumer Migration Reviewer",
+        "RCOUNT owner"
+      ],
+      "sourceLayer": "public APIs, serialized schemas, hash inputs, verifier behavior, deterministic outputs, RCTX crosswalks, RHIST packages, and portfolio dependency updates",
+      "maySupport": [
+        "RLINE-local readiness",
+        "manifest test pass",
+        "fixture hash pass",
+        "local verifier pass",
+        "snapshot candidate"
+      ],
+      "blockedClaims": [
+        "RCOUNT readiness without rehearsal",
+        "portfolio pointer advancement",
+        "release readiness for affected foundation change",
+        "aggregation behavior unchanged",
+        "RHIST lineage unchanged",
+        "package verification behavior unchanged"
+      ],
+      "requiredEvidence": [
+        "affected RLINE tests",
+        "RCOUNT downstream rehearsal",
+        "rctx crosswalk fixture",
+        "rcount-rhist tests",
+        "compatibility policy citation"
+      ]
+    }
+  ]
+}

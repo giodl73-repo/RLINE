@@ -2,7 +2,7 @@
 
 ## RLINE-PF-01: Product Workflow Leaks Into Kernel Surface
 
-**Status:** OPEN
+**Status:** MITIGATED
 
 **Pattern:** BISECT, CROP, ROUTE, FLETCH, RPLAN, RCOUNT, or another consumer's
 workflow terms become RLINE public APIs, dependencies, or fixture assumptions.
@@ -33,16 +33,18 @@ consumer migrations.
 shared concepts can look product-neutral before role review names the boundary.
 
 **Structural solution:** Require Kernel Boundary Steward review and consumer
-migration notes before widening public kernel surfaces.
+migration notes before widening public kernel surfaces, with machine-readable
+blocked claims for product workflow leakage.
 
-**Evidence:** `.roles/parliament/kernel-boundary-steward.md`,
+**Evidence:** `docs/pitfall-boundaries.v1.json`,
+`.roles/parliament/kernel-boundary-steward.md`, `.roles/ROLE.md`,
 `docs/specs/rline-foundation.md`, and `docs/compatibility.md`.
 
 **Test:** `cargo test -p rline-core --test pitfall_policy`.
 
 ## RLINE-PF-02: Candidate Algebra Becomes Promised API
 
-**Status:** OPEN
+**Status:** MITIGATED
 
 **Pattern:** The planning-only algebra-kernel wave is treated as an accepted
 `ralg-core` or `ralgebra-core` public contract before consumer pressure,
@@ -73,17 +75,18 @@ and portfolio dependency adoption.
 portfolio planning may overread it as scheduled implementation.
 
 **Structural solution:** Keep pulses 03 and 04 pending until concrete consumer
-pressure exists, then open a scoped implementation wave.
+pressure exists, then open a scoped implementation wave with minimal API
+review, tests, and migration notes.
 
-**Evidence:** `context/waves/2026-06-06-rline-algebra-kernel-candidate/WAVE.md`
-and
+**Evidence:** `docs/pitfall-boundaries.v1.json`,
+`context/waves/2026-06-06-rline-algebra-kernel-candidate/WAVE.md` and
 `context/waves/2026-06-06-rline-algebra-kernel-candidate/bisect-fairness-invariance.md`.
 
 **Test:** `cargo test -p rline-core --test pitfall_policy`.
 
 ## RLINE-PF-03: RCOUNT Rehearsal Is Skipped
 
-**Status:** OPEN
+**Status:** MITIGATED
 
 **Pattern:** A public API, schema, hash, verifier, or deterministic-output
 change is accepted after RLINE-local tests only, without the required RCOUNT
@@ -115,9 +118,11 @@ lineage, and portfolio dependency updates.
 consumer breakage can look unlikely until RCOUNT is tested.
 
 **Structural solution:** Treat the RCOUNT rehearsal in `docs/compatibility.md`
-as a release gate for affected foundation changes.
+as a release gate for affected foundation changes and block release or
+portfolio pointer advancement without affected RLINE tests plus RCOUNT
+rehearsal.
 
-**Evidence:** `docs/compatibility.md` and
+**Evidence:** `docs/pitfall-boundaries.v1.json`, `docs/compatibility.md` and
 `.roles/parliament/consumer-migration-reviewer.md`.
 
 **Test:** `cargo test -p rline-core --test pitfall_policy`.

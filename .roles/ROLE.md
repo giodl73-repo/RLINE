@@ -30,3 +30,20 @@ before widening the boundary.
 1. Use Kernel Boundary Steward for any crate extraction or dependency change.
 2. Use Manifest Contract Auditor for `rline.manifest.v1`, package metadata, and CLI output.
 3. Use Consumer Migration Reviewer before changing public APIs used by BISECT, CROP, ROUTE, RPLAN, RCOUNT, or future consumers.
+
+## PITFALL gate routing
+
+Invoke the Kernel Boundary Steward and Consumer Migration Reviewer before
+BISECT, CROP, ROUTE, FLETCH, RPLAN, RCOUNT, or another consumer workflow term
+becomes a public API, dependency, manifest field, or fixture assumption in the
+shared kernel surface.
+
+Invoke the Kernel Boundary Steward and Consumer Migration Reviewer before the
+planning-only algebra candidate is described as a `ralg-core` public contract,
+`ralgebra-core` public contract, implementation commitment, scheduled public
+crate, dependency adoption target, or accepted API promise.
+
+Invoke the Consumer Migration Reviewer and RCOUNT owner before public API,
+serialized schema, hash-input, verifier-behavior, deterministic-output,
+RCTX-crosswalk, or RHIST-package changes are promoted as RCOUNT ready, release
+ready, or portfolio-snapshot ready.

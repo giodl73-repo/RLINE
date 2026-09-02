@@ -82,3 +82,26 @@ failure signals.
 
 **Evidence:** `docs/compatibility.md` and
 `.roles/parliament/consumer-migration-reviewer.md`.
+
+## RLINE-INV-06: Kernel, Algebra, And RCOUNT Boundaries Are Machine-Readable
+
+**Status:** VERIFIED
+
+**Claim:** RLINE keeps kernel-neutrality, candidate-algebra, and RCOUNT
+rehearsal boundaries in a machine-readable manifest that is also routed through
+roles, README, specs, compatibility policy, wave docs, and focused pitfall
+tests.
+
+**Why it matters:** Shared kernel work fails when product workflow terms leak
+into public APIs, planning-only algebra becomes a promised crate, or local
+tests replace the first downstream consumer rehearsal.
+
+**Enforcement:** `crates/rline-core/tests/pitfall_policy.rs` asserts the
+boundary manifest, role routing, README non-goals, foundation spec, candidate
+wave, and RCOUNT compatibility gate.
+
+**Evidence:** `docs/pitfall-boundaries.v1.json`, `.roles/ROLE.md`,
+`README.md`, `docs/specs/rline-foundation.md`, `docs/compatibility.md`, and
+`crates/rline-core/tests/pitfall_policy.rs`.
+
+**Test:** `cargo test -p rline-core --test pitfall_policy`.

@@ -21,6 +21,33 @@ fn open_pitfalls_are_use_case_first_and_test_backed() {
     ] {
         assert_contains(pitfalls, field, ".pitfall/rline-pitfalls.md");
     }
+    assert_contains(pitfalls, "MITIGATED", ".pitfall/rline-pitfalls.md");
+
+    let boundaries = include_str!("../../../docs/pitfall-boundaries.v1.json");
+    for phrase in [
+        "RLINE-PF-01",
+        "RLINE-PF-02",
+        "RLINE-PF-03",
+        "application workflow in kernel surface",
+        "ralg-core public contract",
+        "RCOUNT readiness without rehearsal",
+        "concrete consumer pressure",
+        "RCOUNT downstream rehearsal",
+        "compatibility policy citation",
+    ] {
+        assert_contains(boundaries, phrase, "docs/pitfall-boundaries.v1.json");
+    }
+
+    let roles = include_str!("../../../.roles/ROLE.md");
+    for phrase in [
+        "PITFALL gate routing",
+        "Kernel Boundary Steward",
+        "Consumer Migration Reviewer",
+        "accepted API promise",
+        "portfolio-snapshot ready",
+    ] {
+        assert_contains(roles, phrase, ".roles/ROLE.md");
+    }
 }
 
 #[test]
