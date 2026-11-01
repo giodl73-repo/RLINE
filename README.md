@@ -1,5 +1,13 @@
 # RLINE
 
+[Open the Rust/WebAssembly graph workbench](https://giodl73-repo.github.io/RLINE/)
+to inspect your own undirected weighted graph: distances, connectivity, bridges,
+articulation points and selection boundary metrics. Original input and native
+reports are downloadable. Abstract costs and native tolerance/topology conventions
+remain explicit. See [build instructions](BUILD.md) and the
+[consumer wave](context/waves/2026-11-01-browser-graphs/WAVE.md).
+
+
 **Reusable Rust linework for graph, context, statistics, and optimization kernels.**
 
 **Series:** [Tools & Infrastructure](https://github.com/giodl73-repo/giodl73-repo/blob/main/series/tools-infrastructure.md).

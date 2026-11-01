@@ -1,3 +1,11 @@
 target/
 .rline/
 
+
+/dist/
+/.cache/
+/node_modules/
+/test-results/
+/playwright-report/
+/.proof/
+/web/adapter/target/

@@ -3,3 +3,17 @@ docs/fixtures/rctx/l0-shared-context/sources/syn-precincts.csv text eol=crlf
 
 # RHIST fixture manifests bind the canonical LF Git-blob bytes.
 docs/fixtures/rhist/** text eol=lf
+
+# Preserve upstream legal documents verbatim.
+tools/licenses/rust/COPYRIGHT-library.html -text -whitespace
+tools/licenses/rust/licenses/** -text -whitespace
+
+# Keep new browser delivery sources portable without changing fixture policy.
+web/** text eol=lf
+tools/build-pages.py text eol=lf
+tools/serve-pages.py text eol=lf
+tests/browser/** text eol=lf
+package*.json text eol=lf
+playwright.config.js text eol=lf
+.github/workflows/pages.yml text eol=lf
+BUILD.md text eol=lf
