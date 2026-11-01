@@ -44,3 +44,7 @@ downstream migration is introduced. The older tracked branch's 18 RHIST metadata
 files are restored from public master because its CRLF-derived hashes did not
 match the canonical LF source blobs; fixture source bytes are unchanged. Existing
 RCOUNT rehearsal rules remain in force for actual foundation contract changes.
+
+Archive custody preserves the RCTX fixture’s explicit CRLF rule and RHIST LF
+rule. Other text uses LF. Full source ZIP entries match Git archive with these
+attributes; the RCTX CSV archive entry intentionally differs from its LF Git blob.
